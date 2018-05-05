@@ -25,7 +25,7 @@ mvn clean package
 ```
 mvn verify
 ```
-## Lunch
+## Launch
 ```
 java -jar /target/revolut-1.0-SNAPSHOT-fat.jar
 ```
