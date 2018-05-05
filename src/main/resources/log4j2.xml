@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="info">
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} : %msg%n" />
+        </Console>
+
+        <RollingFile name="rollingFile" immediateFlush="false" append="false"
+                     fileName="logs/revolut.log"
+                     filePattern="logs/revolut-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} : %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20" compressionLevel="5"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info" additivity="false">
+            <appender-ref ref="console" />
+            <appender-ref ref="rollingFile" />
+        </Root>
+    </Loggers>
+
+</Configuration>
