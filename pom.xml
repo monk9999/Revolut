@@ -37,6 +37,12 @@
         <guice.version>4.2.0</guice.version>
         <log4j.version>2.11.0</log4j.version>
         <disruptor-for-log4j2>3.3.6</disruptor-for-log4j2>
+        <junit.version>4.12</junit.version>
+        <mockito-core.version>2.18.3</mockito-core.version>
+        <groovy-all.version>2.4.9</groovy-all.version>
+        <spock-core.version>1.1-groovy-2.4</spock-core.version>
+        <jmh-core.version>1.21</jmh-core.version>
+        <jmh-generator-annprocess.version>1.21</jmh-generator-annprocess.version>
     </properties>
 
     <dependencies>
@@ -81,19 +87,19 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>2.18.3</version>
+            <version>${mockito-core.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-codegen</artifactId>
-            <version>3.5.1</version>
+            <version>${vertx.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -105,26 +111,26 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>2.4.9</version>
+            <version>${groovy-all.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
-            <version>1.1-groovy-2.4</version>
+            <version>${spock-core.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
-            <version>1.21</version>
-            <!--<scope>test</scope>-->
+            <version>${jmh-core.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-annprocess</artifactId>
-            <version>1.21</version>
-            <!--<scope>test</scope>-->
+            <version>${jmh-generator-annprocess.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
