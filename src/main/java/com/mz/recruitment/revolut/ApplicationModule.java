@@ -32,6 +32,32 @@ public class ApplicationModule extends AbstractModule {
         }
         return properties;
     }
+	
+	private Properties readProperties2() {
+        Properties properties = new Properties();
+        try {
+            InputStream propertiesStream = ApplicationModule.class.getClassLoader()
+                    .getResourceAsStream(PROPERTIES_FILE_NAME);
+            properties.load(propertiesStream);
+            LOGGER.info("App starting with properties: {}", properties.toString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return properties;
+    }
+	
+	private Properties readProperties3() {
+        Properties properties = new Properties();
+        try {
+            InputStream propertiesStream = ApplicationModule.class.getClassLoader()
+                    .getResourceAsStream(PROPERTIES_FILE_NAME);
+            properties.load(propertiesStream);
+            LOGGER.info("App starting with properties: {}", properties.toString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return properties;
+    }
 
 
 }
