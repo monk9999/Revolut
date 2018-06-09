@@ -30,6 +30,7 @@ public final class Revolut {
         accountRepository.save(AccountFactory.getAccountFactory().createEmptyAccount("03"));
         accountRepository.save(AccountFactory.getAccountFactory().createEmptyAccount("04"));
         accountRepository.save(AccountFactory.getAccountFactory().createEmptyAccount("05"));
+		accountRepository.save(AccountFactory.getAccountFactory().createEmptyAccount("06"));
         accountRepository.save(AccountFactory.getAccountFactory().createAccountWithBalance("1",
                 BigDecimal.valueOf(100000)));
         accountRepository.save(AccountFactory.getAccountFactory().createAccountWithBalance("2",
@@ -40,6 +41,8 @@ public final class Revolut {
                 BigDecimal.valueOf(400000)));
         accountRepository.save(AccountFactory.getAccountFactory().createAccountWithBalance("5",
                 BigDecimal.valueOf(500000)));
+		accountRepository.save(AccountFactory.getAccountFactory().createAccountWithBalance("6",
+                BigDecimal.valueOf(600000)));
     }
 }
 
